@@ -1,0 +1,29 @@
+def main():
+    positive_count = 0
+    negative_count = 0
+    zero_count = 0
+
+    while True:
+        try:
+            num = int(input("Enter a number (or type 'stop' to finish): "))
+            if num > 0:
+                positive_count += 1
+            elif num < 0:
+                negative_count += 1
+            else:
+                zero_count += 1
+        except ValueError:
+            # Check if the user wants to stop
+            stop = input("Do you want to stop? (yes/no): ").strip().lower()
+            if stop == 'yes':
+                break
+            else:
+                print("Please enter a valid number.")
+
+    print("\nSummary:")
+    print(f"Positive numbers: {positive_count}")
+    print(f"Negative numbers: {negative_count}")
+    print(f"Zeros: {zero_count}")
+
+if __name__ == "__main__":
+    main()
