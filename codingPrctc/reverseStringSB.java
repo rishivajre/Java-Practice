@@ -21,6 +21,6 @@ public class reverseStringSB {
             sb.setCharAt(front, backChar);
             sb.setCharAt(back, frontChar);
         }
-        System.out.println(sb);
+        System.out.println(sb); // Output: Hello
     }
 }
