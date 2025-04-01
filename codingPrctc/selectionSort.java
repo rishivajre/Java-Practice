@@ -19,8 +19,8 @@ public class selectionSort {
                 }
                 int temp = arr[smallest]; // Store the smallest element in a temporary variable
                 // Swap the smallest element with the first unsorted element
-                arr[smallest] = arr[j]; // Swap the smallest element with the first unsorted element
-                arr[j] = temp; // Swap the smallest element with the first unsorted element
+                arr[smallest] = arr[i]; // Swap the smallest element with the first unsorted element
+                arr[i] = temp; // Swap the smallest element with the first unsorted element
             }
         }
 
