@@ -13,8 +13,9 @@ public class selectionSort {
         for (int i=0; i<arr.length-1; i++) {
             // Find the min element in each unsorted part
             int smallest = i;
-            for (int j=i+1; j<arr.length; j++) {
-                if (arr[j] < arr[smallest]){
+            for (int j=i+1; j<arr.length; j++) { 
+                if (arr[j] < arr[smallest]){ // Compare current element with the smallest element found so far
+                    // Update smallest index if current element is smaller
                     smallest = j; // Update index of the smallest element
                 }
                 int temp = arr[smallest]; // Store the smallest element in a temporary variable
