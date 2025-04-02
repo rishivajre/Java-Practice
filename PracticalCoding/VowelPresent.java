@@ -21,9 +21,11 @@ public class VowelPresent {
     // Approach 3: Using Set Intersection
     public static boolean hasVowelSet(String str) {
         Set<Character> vowels = new HashSet<>(Arrays.asList('a', 'e', 'i', 'o', 'u'));
+        // return str.toLowerCase().chars()
+        //         .mapToObj(c -> (char) c)
+        //         .anyMatch(vowels::contains); ||OR||
         return str.toLowerCase().chars()
-                .mapToObj(c -> (char) c)
-                .anyMatch(vowels::contains);
+                .anyMatch(ch -> vowels.contains((char)ch));
     }
     public static void main(String[] args) {
         // Test cases for hasVowel method
@@ -33,7 +35,7 @@ public class VowelPresent {
         System.out.println(hasVowel("AEIOU")); // true
         System.out.println(hasVowel("123")); // false
         System.out.println("------------------");
-        
+
         // Test cases for hasVowelRegex method
         VowelPresent vp = new VowelPresent();
         //System.out.println(vp.hasVowelRegex("Hello")); // true
