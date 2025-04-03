@@ -11,7 +11,7 @@ public class selectionSort {
 
         // Selection Sort algorithm
         for (int i=0; i<arr.length-1; i++) {
-            // Find the min element in each unsorted part
+            // Find the smallest element in each unsorted part
             int smallest = i;
             for (int j=i+1; j<arr.length; j++) { 
                 if (arr[j] < arr[smallest]){ // Compare current element with the smallest element found so far
@@ -31,7 +31,7 @@ public class selectionSort {
 }
 // 🌟 How Selection Sort Works:
 // 🟢 Similar to Bubble Sort, but instead of swapping adjacent elements repeatedly,
-// 🔍 It finds the **minimum element** from the unsorted part of the array 
+// 🔍 It finds the **smallest element** from the unsorted part of the array 
 //    and swaps it with the **first unsorted element**.
 
 // 🔄 Algorithm Steps:
