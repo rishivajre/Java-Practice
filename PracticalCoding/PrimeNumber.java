@@ -1,3 +1,5 @@
+import java.util.stream.IntStream;
+
 public class PrimeNumber {
     //Approach 01: Basic Iteration
     public static boolean isPrimeIterative(int num) {
@@ -22,6 +24,15 @@ public class PrimeNumber {
         return true; // Prime if no divisors found
     }
 
+    //Apprioch 03: Using Java 8 Streams (Functional Programming)
+    public static boolean isPrimeStream(int num) {
+        if (num <=1 ) return false;
+        return IntStream.rangeClosed(2, (int)Math.sqrt(num))
+        .noneMatch(i -> num % i == 0); 
+        // Check if any number in the range divides num evenly
+        // If none do, it's prime
+    }
+
     public static void main(String[] args) {
         //int num = 23; // Assign a single integer value
         System.out.println("Basic Check: ");
@@ -42,5 +53,15 @@ public class PrimeNumber {
                 System.out.println(num + " is not a prime number!");
             }
         }
+        System.out.println("Stream Check: ");
+        for (int num : new int[] {56,23,69,41,43,19}) {
+            
+            if (isPrimeStream(num)) {
+                System.out.println(num + " is a prime number!");
+            } else {
+                System.out.println(num + " is not a prime number!");
+            }
+        }
+        
     }
 }
