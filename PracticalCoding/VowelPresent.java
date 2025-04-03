@@ -4,18 +4,18 @@ public class VowelPresent {
     // Approach 1: Using loop and character checking
     public static boolean hasVowel(String str) {
         str = str.toLowerCase();
-        for (int i=0; i<str.length(); i++){
-            char ch = str.charAt(i);
-            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+        for (int i=0; i<str.length(); i++) {
+            char ch  = str.charAt(i);
+            if (ch=='a' || ch=='e' ||ch=='i' || ch=='o' || ch=='u' ) {
                 return true; // Vowel found
             }
-        }   
-        return false; // No vowel found
+        }
+        return false; // No vowels found
     }
 
     // Approach 2: Using regex
     public static boolean hasVowelRegex(String str) {
-        return str.toLowerCase().matches(".*[aeiou].*");
+        return str.toLowerCase().matches(".*[aeiou].*"); // Regex to check for vowels
     }
 
     // Approach 3: Using Set Intersection
