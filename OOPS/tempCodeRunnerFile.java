@@ -1,1 +1,1 @@
-s1
+int marks, String city
