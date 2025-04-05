@@ -8,7 +8,9 @@ public class FibonacciRec {         //Simple Recursion
     }
     //Calculate Fib
     private static int fib(int n) {
-        if (n<=1) return n; // for 0, 1
+        if (n<=1) {
+        return n; // for 0, 1
+        }
         return fib(n-1) + fib (n-2);
     }
 
