@@ -1,9 +1,9 @@
-import bank;
+import bank.*; // Import all classes from the 'bank' package
 
 public class bankStatement {
     public static void main(String[] args) {
-        //Account a = new Account();
-        bank.Account a = new bank.Account(); // Create an instance of the Account class
+        // Create an instance of the Account class
+        Account a = new Account();
         // Set account details
         a.accountHolderName = "Rishi";
         a.accountNumber = "1234567890";
