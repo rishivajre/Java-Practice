@@ -24,7 +24,6 @@ public class Sorting {
 
         Collections.reverse(str); // Reverses the order of the elements in the list
         System.out.println("Reversed list: " + str); // Output: Reversed list: [Orange, Grapes, Banana, Apple, Mango]
-
         
     }
 }
