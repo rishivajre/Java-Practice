@@ -6,7 +6,7 @@ public class SyncTestLogger {
         private static List<String> testLogs = Collections.synchronizedList(new ArrayList<>());
 
         public static void log(String message) {
-            // Adding a log message to the synchronized list
+            // Adding a log message to the synchronized list            
             testLogs.add(message);
         }
 

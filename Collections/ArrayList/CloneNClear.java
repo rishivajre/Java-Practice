@@ -1,13 +1,14 @@
 import java.util.*;
 
-public class CleanCloning {
+public class CloneNClear {
     public static void main(String[] args) {
-
         ArrayList<String> list = new ArrayList<>();
         list.add("Apple");
         list.add("Banana");
         list.add("Cherry");
         list.add("Date");
+        list.add("Elderberry");
+        // Adding elements to the ArrayList
 
         List<String> cloneList = (ArrayList<String>) list.clone(); // 🤖 Cloning the ArrayList 🤖 
         // why?: to create a new object with the same elements & properties as the original list
