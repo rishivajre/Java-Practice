@@ -20,9 +20,10 @@ public class AListTraversal {
 
         //3. Using Iterator
         Collections.reverse(list); // Reversing the list for demonstration
-        Iterator<String> it = list.iterator(); // Creating a new ArrayList to avoid ConcurrentModificationException
-        while (it.hasNext()) {
-            System.out.print(it.next() + " "); // Output: Apple, Banana, Cherry
+        Iterator it = list.iterator(); // Creating a new ArrayList to avoid ConcurrentModificationException
+        while (it.hasNext()) { // ... hasNext() checks if there are more elements in the list
+            // ... next() returns the next element in the iteration
+            System.out.println(it.next()); // Output: Cherry, Banana, Apple
         }
     }
 }
