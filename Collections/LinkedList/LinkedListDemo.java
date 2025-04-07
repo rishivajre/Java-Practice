@@ -32,14 +32,14 @@ public class LinkedListDemo {
     public void display() {
         Node current = head; // current node ko head se start karo
         while (current != null) { // Jab tak current node null nahi hai
-            System.out.println(current.data + " ➡️ " ); // Print current node ka data
+            System.out.print(current.data + " -> " ); // Print current node ka data
             current = current.next; // Current ko next node par le jao
         }
         System.out.println("null"); // Last mein null print karo
     }
     
     public static void main(String[] args) {
-        LinkedList list = new LinkedList();
+        LinkedListDemo list = new LinkedListDemo();
         list.append(5);
         list.append(19);
         list.append(15);
