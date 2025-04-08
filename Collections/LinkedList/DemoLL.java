@@ -18,7 +18,6 @@ public class DemoLL {
             head = newNode;
             return;
         }
-
         Node current = head;        //Temporary pointer head se shuru karo
         while (current.next != null) {
             current = current.next;
