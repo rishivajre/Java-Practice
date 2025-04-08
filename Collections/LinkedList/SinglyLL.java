@@ -58,3 +58,28 @@ public class SinglyLL {
 
 
 }
+
+
+/** 
+ * Step-by-Step Dry Run:
+
+Start: head = null (list khali hai).
+append(5):
+newNode = [5 | null]
+head == null, so head = [5 | null].
+append(10):
+newNode = [10 | null]
+current = head = [5 | null]
+current.next == null, so current.next = [10 | null]
+List: [5 | *] -> [10 | null].
+insertAtStart(2):
+newNode = [2 | null]
+newNode.next = head (head = [5 | *] -> [10 | null])
+head = newNode
+List: [2 | *] -> [5 | *] -> [10 | null].
+Key Details:
+
+append: Last tak jao, naya node jodo—O(n) time.
+insertAtStart: Head ko replace karo—O(1) time.
+Edge case: Khali list mein append aur insertAtStart same kaam karte hain!
+ */
