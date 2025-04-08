@@ -46,3 +46,35 @@ public class DemoLL {
 
 
 }
+
+
+/**
+ * 
+ * How It Works: Step-by-Step
+First append(5):
+head == null hai, so head = newNode (data = 5, next = null).
+Second append(10):
+head ab 5 hai. current last node (5) pe jata hai, aur current.next = newNode (10).
+Third append(15):
+current 5 se 10 tak jata hai (10 ka next null hai), phir current.next = 15.
+
+
+
+Initial State (Empty):
+head -> null
+
+After append(5):
+head -> [5 | null]
+
+After append(10):
+head -> [5 | *] --> [10 | null]
+
+After append(15):
+head -> [5 | *] --> [10 | *] --> [15 | null]
+
+[data | next]: Har box mein data aur next pointer hota hai.
+
+*: Next node ka address (pointer).
+
+Output: 5 -> 10 -> 15 -> null
+ */
