@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class RSStringBuilder {
+public class StringBuilderRS {
     // Using Stringbuilder reverse a string
     public static String reverseString(String str) {
         if (str == null) return null;
