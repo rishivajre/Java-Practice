@@ -1,4 +1,4 @@
-public class RSforLoop {
+public class RSforLoop {    // reverse a given string using a for loop
     public static void main(String[] args) {
         String in = "ihsiR";
         String out = "";
