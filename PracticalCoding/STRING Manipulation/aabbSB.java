@@ -1,4 +1,4 @@
-public class aabbbcc {
+public class aabbSB {
     public static String compressString(String str) {
         if (str == null || str.isEmpty()) return "";
         StringBuilder sb = new StringBuilder();
