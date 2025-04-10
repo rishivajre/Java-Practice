@@ -1,4 +1,4 @@
-public class aabbSB {
+public class aabbSB {  // aabbbcc -> a2b3c2 : Using Loop with StringBuilder (Simple)
     public static String compressString(String str) {
         if (str == null || str.isEmpty()) return "";
         StringBuilder sb = new StringBuilder();
