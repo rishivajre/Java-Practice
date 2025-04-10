@@ -2,19 +2,19 @@ public class aabbbcc {
     public static String compressString(String str) {
         if (str == null || str.isEmpty()) return "";
         StringBuilder sb = new StringBuilder();
-
-        char current = str.charAt(0);
         int count = 1;
-        for (int i=1; i<str.length(); i++) {
-            if (str.charAt(i) == current) {
+        char current = str.charAt(0);
+
+        for(int i=1; i<str.length(); i++) {
+            if(str.charAt(i) == current) {
                 count++;
-            }else {
+            }else{
                 sb.append(current).append(count);
                 current = str.charAt(i);
                 count = 1;
             }
         }
-        sb.append(current).append(count); // Append the last group
+        sb.append(current).append(count);
         return sb.toString();
     }
 
