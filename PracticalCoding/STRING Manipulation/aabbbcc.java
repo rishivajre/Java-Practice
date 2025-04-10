@@ -1,0 +1,25 @@
+public class aabbbcc {
+    public static String compressString(String str) {
+        if (str == null || str.isEmpty()) return "";
+        StringBuilder sb = new StringBuilder();
+
+        char current = str.charAt(0);
+        int count = 1;
+        for (int i=1; i<str.length(); i++) {
+            if (str.charAt(i) == current) {
+                count++;
+            }else {
+                sb.append(current).append(count);
+                current = str.charAt(i);
+                count = 1;
+            }
+        }
+        sb.append(current).append(count); // Append the last group
+        return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        String str = "aabbbcc";
+        System.out.println(compressString(str));
+    }
+}
