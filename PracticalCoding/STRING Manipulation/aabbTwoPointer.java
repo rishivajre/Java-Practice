@@ -2,14 +2,13 @@ public class aabbTwoPointer {   // aabbbcc -> a2b3c2 : Using 2 Pointer Tech(effi
 
     public static String compreString(String str) {
         if(str == null || str.isEmpty()) return "";
-        char[] chars = str.toCharArray(); //➡️ Input string को char array में convert किया गया ताकि हम हर character को index से access कर सकें
-        // chars = ['a', 'a', 'b', 'b', 'b', 'c', 'c']  << in the background        
+        char[] chars = str.toCharArray();
         StringBuilder sb = new StringBuilder();
         int start = 0;
 
         for (int end=1; end<=chars.length; end++) {
-            if (end == chars.length || chars[end] != chars[start]){
-                sb.append(chars[start]).append(end - start);
+            if (end == chars.length || chars[end] != chars[start]) {
+                sb.append(chars[start]).append(end-start);
                 start = end;
             }
         }
