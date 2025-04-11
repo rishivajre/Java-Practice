@@ -7,7 +7,7 @@ public class aabbLoop {  // aabbbcc -> a2b3c2 : Using Loop with StringBuilder (S
 
         for(int i=1; i<str.length(); i++) {
             if(str.charAt(i) == current) {
-                count++;
+                count++; 
             }else{
                 sb.append(current).append(count);
                 current = str.charAt(i);
