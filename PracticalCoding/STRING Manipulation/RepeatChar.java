@@ -1,5 +1,8 @@
-public class RepeatChar {
-    public String repeatString(String str) {
+// Convert Input String (e.g., "abcd") to Repeated Characters (e.g., "aabbccdd") 
+// Using Loop with StringBuilder (Simple)
+   
+public class RepeatChar { 
+     public String repeatString(String str) {
         if (str == null || str.isEmpty()) return "";
         StringBuilder sb = new StringBuilder();
         for (char ch : str.toCharArray()){
