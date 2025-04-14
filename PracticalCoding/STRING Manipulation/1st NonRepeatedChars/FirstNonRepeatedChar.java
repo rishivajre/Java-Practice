@@ -1,5 +1,4 @@
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 
 public class FirstNonRepeatedChar {
     public static Character firstNonRepeatedCharacter(String str) {
@@ -16,7 +15,18 @@ public class FirstNonRepeatedChar {
     }
 
     public static void main(String[] args) {
-        String str = "aabbcdeff";
+        String str = "aabbccddeff";
         System.out.println(firstNonRepeatedCharacter(str));
     }
 }
+
+/** 
+ * 📚 ASCII Mindmap:
+firstNonRepeated1()
+├── Null/Empty check
+├── Build freq map
+│   └── LinkedHashMap<Character, Integer>
+├── Traverse map
+│   └── Find entry with value == 1
+└── Return first such character or null
+ */
