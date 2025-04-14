@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class FirstNonRepeatedChar {
+public class FirstNonRepeatedChar { // 1: Using Linked-HashMap (Simple)
     public static Character firstNonRepeatedCharacter(String str) {
         if (str == null || str.isEmpty()) return null;
         Map<Character, Integer> map = new LinkedHashMap<>();
