@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class UsingStream { // 3: Stream with Grouping (Modern)
     public static Character fCharacter(String str) {
@@ -14,7 +15,7 @@ public class UsingStream { // 3: Stream with Grouping (Modern)
                     .orElse(null);
     }
 
-    public static void main(String[] args) {
+    public static void main (String[] args) {
         String str = "ssfftte";
         System.out.println(fCharacter(str));
     }
