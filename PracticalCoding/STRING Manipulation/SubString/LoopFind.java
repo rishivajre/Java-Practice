@@ -1,16 +1,24 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class LoopFind { // Approach 1: Nested Loops (Simple)
     public static List<String> allSubStrings(String str) {
+
         List<String> result = new ArrayList<>();
-        if (str == null || str.isEmpty()) return result;
+        if(str == null) return result;
+
         for (int i =0; i<str.length(); i++) {
             for (int j=i+1; j<=str.length(); j++) {
                 result.add(str.substring(i, j));
             }
         }
-        return result;
-    } 
+        return result;  
+    }
+
+    public static void main(String[] args) {
+        String str = "abcd";
+        System.out.println(allSubStrings(str));
+    }
     
 }
 // continuous characters, not combinations
