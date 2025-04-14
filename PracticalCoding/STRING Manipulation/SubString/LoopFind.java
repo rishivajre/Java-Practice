@@ -87,6 +87,7 @@ Space Complexity	O(n^2) (because of storing substrings)
 ✨ Total substrings = n*(n+1)/2, where n = length of string.
 
 💡 Pro Tips:
+
 Want unique substrings only? Use Set<String> instead of List<String>.
 
 Want sorted substrings? Add a sorting step: Collections.sort(result);
