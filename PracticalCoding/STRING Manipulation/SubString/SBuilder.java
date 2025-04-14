@@ -25,7 +25,12 @@ public class SBuilder {
 
 
 /**
- * 🔁 Dry Run: Input "abc"
+ * Q: Generate all substrings (continuous sequences) of a given string using an efficient technique with StringBuilder.
+
+🔍 Input: "abc"
+📤 Output: ["a", "ab", "abc", "b", "bc", "c"]
+
+🔁 Dry Run: Input "abc": 
 i	j	sb (building string)	Result List
 0	0	    "a"	                   ["a"]
 0	1	    "ab"	               ["a", "ab"]
