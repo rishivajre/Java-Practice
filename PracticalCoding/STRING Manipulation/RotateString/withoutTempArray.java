@@ -37,5 +37,50 @@ public class withoutTempArray { // without temp array creation and without subst
 Example (Left rotation)
 Input: [1, 2, 3, 4, 5], Rotate by 2 → Output: [3, 4, 5,| 1, 2]
 
+Left Array Rotation (by k steps)
+|
+|-- Step 1: Reverse Part 1 (from 0 to k-1)
+|     Input:  [1, 2, 3, 4, 5],  k = 2
+|     Result: [2, 1, 3, 4, 5]
+|
+|-- Step 2: Reverse Part 2 (from k to n-1)
+|     Reverse [3, 4, 5] → [5, 4, 3]
+|     Result: [2, 1, 5, 4, 3]
+|
+|-- Step 3: Reverse Whole Array (from 0 to n-1)
+|     Reverse [2, 1, 5, 4, 3] → [3, 4, 5, 1, 2]
+|
+|-- ✅ Final Rotated Array (Left Rotate by 2): [3, 4, 5, 1, 2]
+
+📌 Key Points:
+✅ In-place (no extra space)
+
+✅ Time Complexity: O(n)
+
+✅ Space Complexity: O(1)
+
+✅ Works for any value of k (even when k > n)
+
+k = k % n handles overflow
+
+🔄 Same logic can be used for Right Rotation with a different sequence of reversals.
+
+
+Right Array Rotation (by k steps)
+|
+|-- Step 1: Reverse Last k Elements (from n-k to n-1)
+|     Input:  [1, 2, 3, 4, 5],  k = 2
+|     Reverse [4, 5] → [5, 4]
+|     Result: [1, 2, 3, 5, 4]
+|
+|-- Step 2: Reverse First n-k Elements (from 0 to n-k-1)
+|     Reverse [1, 2, 3] → [3, 2, 1]
+|     Result: [3, 2, 1, 5, 4]
+|
+|-- Step 3: Reverse Whole Array (from 0 to n-1)
+|     Reverse [3, 2, 1, 5, 4] → [4, 5, 1, 2, 3]
+|
+|-- ✅ Final Rotated Array (Right Rotate by 2): [4, 5, 1, 2, 3]
+
 
  */
