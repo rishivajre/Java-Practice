@@ -22,43 +22,31 @@ public class UsingStream {
 }
 
 /**
- * 
- *✅ In UsingStack (your working example):
-java
-Copy
-Edit
+
+ ✅ In UsingStack (your working example):
+
 reverse.reverseArray(arr); // modifies 'arr' directly
 System.out.println(Arrays.toString(arr));
 Why it works?
 Because the method:
 
-java
-Copy
-Edit
+
 public void reverseArray(int[] arr)
 is modifying the array in-place — using a Stack and changing the contents of the same array that was passed in.
 
 🔁 This is pass-by-reference (kind of) behavior for arrays:
-java
-Copy
-Edit
+
 for (int i = 0; i < arr.length; i++) {
     arr[i] = stack.pop();  // Directly changes original array
 }
 ✅ So, arr is mutated, and changes are visible in main().
 
 ❌ In UsingStream (non-working version):
-java
-Copy
-Edit
+
 rev.reverseArray(arr); // returns new array, but result is ignored
 System.out.println(Arrays.toString(arr)); // prints original
 Why it fails?
 This:
-
-java
-Copy
-Edit
 return IntStream.range(0, arr.length)
                 .map(i -> arr[arr.length - 1 - i])
                 .toArray();
