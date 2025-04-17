@@ -43,6 +43,7 @@ public class StreamDemo {
         // Using reduce to combine
         String joined = names.stream()
                                 .reduce("", (a, b) -> a + b + " ");
+        System.out.println(joined);
         System.out.println(joined.trim());
         
     }
