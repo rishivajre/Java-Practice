@@ -9,3 +9,10 @@ public class InfiniteStreamDemo {
         infiStream.limit(5).forEach(n->System.out.println(n));
     }
 }
+
+/**
+ * Explanation
+Basic: Uses Stream.iterate to create a sequence of integers.
+Moderate: Uses Stream.generate to produce random values.
+Advanced: Demonstrates a more complex use of Stream.iterate to calculate Fibonacci numbers.
+ */
