@@ -2,12 +2,11 @@ import java.util.Arrays;
 
 public class TwoPointerRev {    //Reverse array via Two-pointer swap
     public static int[] reverseArray(int[] arr) {
-        if (arr == null) return null;
-
-        int left = 0; 
+        if (arr == null) return arr;
+        int left =0;
         int right = arr.length-1;
 
-        while (left<right) {
+        while (left < right) {
             int temp = arr[left];
             arr[left++] = arr[right];
             arr[right--] = temp;
