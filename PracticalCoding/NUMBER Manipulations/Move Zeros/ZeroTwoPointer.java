@@ -13,7 +13,7 @@ public class ZeroTwoPointer {
 
 
     public static void main(String[] args) {
-        int[] arr = {0,1,2,3,4,9,8};
+        int[] arr = {1,0,2,3,4,9,8};
         moveZeroToEnd(arr);
         System.out.println(Arrays.toString(arr));
     }
