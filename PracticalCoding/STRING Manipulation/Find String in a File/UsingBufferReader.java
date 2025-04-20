@@ -9,7 +9,7 @@ public class UsingBufferReader {    // Problem Statement: Find String in File
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = br.readLine()) != null) {
-                if (line.contains(target)) return true;
+                if (line.toLowerCase().contains(target.toLowerCase())) return true;
             }
         } catch (Exception e) {
             // TODO: handle exception
