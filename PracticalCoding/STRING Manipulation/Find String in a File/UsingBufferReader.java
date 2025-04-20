@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 
 public class UsingBufferReader {    // Problem Statement: Find String in File
     
@@ -10,7 +11,7 @@ public class UsingBufferReader {    // Problem Statement: Find String in File
             while ((line = br.readLine()) != null) {
                 if (line.contains(target)) return true;
             }
-        }  catch (Exception e) {
+        } catch (Exception e) {
             // TODO: handle exception
         }
         return false;
