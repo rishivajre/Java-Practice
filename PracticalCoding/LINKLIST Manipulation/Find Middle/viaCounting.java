@@ -2,11 +2,11 @@ class ListNode {
     int val;
     ListNode next;
     ListNode(int val) {
-        this.val =val;
+        this.val = val;
     }
 }
     
-public class MiddleNode {
+public class viaCounting {
     public static ListNode findMiddle(ListNode head) {
         if (head == null) return null;
         int count = 0;
@@ -22,8 +22,5 @@ public class MiddleNode {
         return current;
     }
 
-    public static void main(String[] args) {
-        MiddleNode mN = new MiddleNode();
-        mN.findMiddle(50);
-    }
+    
 }
