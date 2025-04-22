@@ -3,10 +3,12 @@ public class MaxKadaneAlgo {
         int maxSum = nums[0];   //max sum 1st element at start
         int currSum = nums[0]; // Current Sum of SubArray
 
-        for (int i=1; i<nums.length; i++) {
+        for (int i=0; i<nums.length; i++) {
             currSum = Math.max(nums[i], currSum + nums[i]);
+                System.out.print(i + " currSum: " +currSum + " ");
             maxSum = Math.max(maxSum, currSum);
-        }
+                System.out.println("maxSum: " +maxSum +" ");
+        } System.out.println();
         return maxSum;
     }
 
