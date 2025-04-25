@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class FindElementUsingLoop {
-    public static void findIndicesWithLoop (int[] arr, int searchElement) {
+    public static void findIndicesWithLoop(int[] arr, int searchElement) {
         List<Integer> indices = new ArrayList<>();
         for (int i=0; i<arr.length; i++) {
             if (arr[i] == searchElement) {
@@ -9,11 +9,10 @@ public class FindElementUsingLoop {
             }
         }
         if (indices.isEmpty()) {
-            System.out.println("Element not found");
+            System.out.println("Element not found / Element nahi mila");
         } else {
-            System.out.println("Element found at indices: " + indices);
+            System.out.println("Element found at indices / Element yeh indices par mila: " + indices);
         }
-
     }
 
     public static void main(String[] args) {
