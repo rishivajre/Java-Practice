@@ -13,7 +13,7 @@ public class UsingHashMap { // finding indices of a search element in an array
         // Check if searchElement exists in the map
         List<Integer> indices = indexMap.getOrDefault(searchElement, new ArrayList<>());
         if (indices.isEmpty()) {
-            System.out.println("Element not found!");
+            System.out.println("Element not found!" + indices);
         } else {
             System.out.println("Element found at indices: " + indices);
         }
