@@ -1,4 +1,4 @@
-public class UsingLoop {
+public class UsingLoop { // Non-Repeating element
     // Find the first non-repeating element in an array
     public static int findFirstNonRepeating(int[] arr) {
         for(int i = 0; i < arr.length; i++) {
@@ -17,8 +17,8 @@ public class UsingLoop {
     }
 
     public static void main(String[] args) {
-        int[] arr = {4, 5, 1, 2, 0, 4};
-        System.out.println(findFirstNonRepeating(arr));
+        int[] arr = {1,1,2,2,3,};
+        System.out.println("First Non-Repeating element is: " + findFirstNonRepeating(arr));
     }
 }
 
