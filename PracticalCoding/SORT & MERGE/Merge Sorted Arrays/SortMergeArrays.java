@@ -13,7 +13,7 @@ public class SortMergeArrays {
         // Two Pointer Merge
         while (i<arr1.length && j<arr2.length) {
             if (arr1[i] <= arr2[j]) {
-                merged[k++] = arr1[i++];
+                merged[k++] = arr1[i++]; 
             } else {
                 merged[k++] = arr2[j++];
             }

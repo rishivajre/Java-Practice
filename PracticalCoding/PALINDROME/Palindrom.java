@@ -1,4 +1,5 @@
-public class Palindrom {    // Approach 1: Two-pointer technique.
+public class Palindrom {    
+    // Approach 1: Two-pointer technique.
     public static boolean isPalindrome1(String str) {
         str = str.toLowerCase().replaceAll("[^a-z0-9]", "");
         int left = 0, right = str.length() - 1;

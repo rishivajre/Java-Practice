@@ -8,7 +8,7 @@ public class SplitAndReverse {
         //StringBuilder s = new StringBuilder();
         for(int i=words.length-1; i>=0; i--) {
             s.append(words[i]);
-            if (i>0) s.append(" ");
+            if ( i > 0 ) s.append(" ");
         }
         return s.toString();
     }
