@@ -10,7 +10,7 @@ public class SplitAndReverse {
             s.append(words[i]);
             if ( i > 0 ) s.append(" ");
         }
-        return s.toString();
+        return s.toString(); 
     }
     public static void main(String[] args) {
         String sentence = "Right is Wrong";
