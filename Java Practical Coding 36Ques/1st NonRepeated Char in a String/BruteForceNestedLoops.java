@@ -26,3 +26,17 @@ public class BruteForceNestedLoops {
         sc.close();
     }
 }
+
+
+
+/*  PSEUDOCODE****
+
+for i in 0 to length(s)-1:
+    count = 0
+    for j in 0 to length(s)-1:
+        if charAt[j] == charAt[i]:
+            count++
+    if count == 1:
+        return s[i]
+return null
+ */
