@@ -1,3 +1,5 @@
+//✅ Approach 1: Brute‑Force (Nested Loops)
+
 import java.util.Scanner;
 
 public class BruteForceNestedLoops {
@@ -37,6 +39,6 @@ for i in 0 to length(s)-1:
         if charAt[j] == charAt[i]:
             count++
     if count == 1:
-        return s[i]
+        return charAt[i]
 return null
  */
