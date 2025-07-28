@@ -1,8 +1,9 @@
-public class RevStringPr {    // reverse a given string using a for loop
+public class RevStringPr {    
+
+// reverse a given string using a for loop & 2 pointer method
 
     public static String reverseString(String str){
         if (str=null) return null;
-
         char[] chars = str.toCharArray();
         int left = 0;int right = chars.length-1;
 

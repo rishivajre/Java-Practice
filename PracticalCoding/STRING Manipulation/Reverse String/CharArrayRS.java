@@ -8,7 +8,7 @@ public class CharArrayRS {    // Using Char[] array and 2 pointers
             char temp = chars[left];
             chars[left++] = chars[right];
             chars[right--] = temp;
-        }
+        } 
 
         return new String(chars);
     }
