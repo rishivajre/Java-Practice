@@ -1,5 +1,5 @@
 public class Swap2NumsMath {
-    public static void main (String [] args) {
+    public static void main(String[] args) {
         int a = 10;
         int b = 110;
         System.out.println("val of a : " + a);
