@@ -5,9 +5,9 @@ public class FindLength {
         int length = input.length();
 
         if (length % 2 == 0) {
-            System.out.println("Length of the String is Even: " + length);
+            System.out.println("String length is Even i.e.: " + length);
         } else {
-            System.out.println("Length of the String is Odd: " + length);
+            System.out.println("String length is Odd i.e.: " + length);
         }
     }
 
