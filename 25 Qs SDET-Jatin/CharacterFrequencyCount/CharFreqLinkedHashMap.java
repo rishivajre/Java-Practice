@@ -4,9 +4,7 @@ import java.util.Map;
 public class CharFreqLinkedHashMap {
     public static void main(String[] args) {
 
-        // Input string
         String input = "Paper";
-
         // Convert the input to lowercase and then to a character array
         char[] inputArray = input.toLowerCase().toCharArray();
 

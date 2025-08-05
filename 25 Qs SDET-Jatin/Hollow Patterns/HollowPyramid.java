@@ -15,15 +15,13 @@ public class HollowPyramid {
                 // - the last row (i == totalRows)
 
                 if (j == 1 || j == i || i == totalRows) {
-                    System.out.print(j);          // Print the number
+                    System.out.print(j); // Print the number
                 } else {
-                    System.out.print(" ");      // Print space inside the hollow
+                    System.out.print(" "); // Print space inside the hollow
                 }
-                System.out.print(" ");          // Add extra space for formatting
+                System.out.print(" "); // Add extra space for formatting
             }
-
-            // Move to the next line after each row
-            System.out.println("");
+            System.out.println(""); // Move to the next line after each row
         }
     }
 }
