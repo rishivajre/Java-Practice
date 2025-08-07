@@ -2,7 +2,7 @@ import java.util.HashSet;
 
 public class PanagramUsingHashSet {
     public static void main(String[] args) {
-        String input = "The quick brown fox jumps over the lazy dog.";
+        String input = "The quick brown fox @@@### jumps over the 333 lazy dog.";
         if (CheckPanagram(input)) {
             System.out.println("It is Panagram");
         } else {
