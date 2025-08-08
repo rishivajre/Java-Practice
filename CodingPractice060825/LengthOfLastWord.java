@@ -1,6 +1,6 @@
 public class LengthOfLastWord {
     public static void main(String[] args) {
-        String input = " Help me fing a Job";
+        String input = " Help me fing a Job..";
         input = input.trim(); // white spaces removed from start and end
         System.out.println(input);
         int count = 0;
