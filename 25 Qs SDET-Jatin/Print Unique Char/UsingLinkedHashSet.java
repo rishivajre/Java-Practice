@@ -17,7 +17,7 @@ public class UsingLinkedHashSet {
                 sb.append(c);  // Only append if char was added (i.e., it's unique)
             }
         }
-        System.out.println("Unique Chars (as Set): " + charSet);   // Shows [a, b, c, d...]
-        System.out.println("Unique Chars (as String): " + sb);     // Shows abcd...
+        System.out.println("Unique Chars (as Set): " + charSet);   // Shows [a, b, c, d...] maintaining Insertion Order
+        System.out.println("Unique Chars (as String): " + sb);     // Shows abcd... \\ else use: TREEMAP<>();
     }
 }
