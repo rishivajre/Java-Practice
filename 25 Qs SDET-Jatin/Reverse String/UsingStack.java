@@ -21,6 +21,7 @@ public class UsingStack {
         // pop chars from stack till gets empty
         int i=0;
         while (!stack.isEmpty()) {
+            
             reverseString[i++] = stack.pop();
         }
 
