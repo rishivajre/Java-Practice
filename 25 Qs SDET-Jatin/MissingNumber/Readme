@@ -1,0 +1,80 @@
+🔹 Case A: Exactly ONE missing number
+1. Sorting
+
+Time: O(n log n)
+Space: O(1) (in-place)
+
+✅ Easy to explain, but not optimal
+
+2. Sum Formula (Gauss’ sum: n(n+1)/2 − Σ array)
+
+Time: O(n)
+
+Space: O(1)
+
+✅ Very efficient
+
+⚠️ Risk of integer overflow for very large n
+
+3. XOR Trick
+
+Time: O(n)
+
+Space: O(1)
+
+✅ Handles very large n (no overflow issue)
+
+✅ Best overall choice for single missing number
+
+4. Streams (Sum / XOR)
+
+Time: O(n)
+
+Space: O(1) (lazy eval)
+
+✅ Modern, concise, but slightly slower due to Stream overhead
+
+Good for readability & interviews
+
+🔹 Case B: Multiple missing numbers
+1. Set + Stream
+
+Time: O(n)
+
+Space: O(n)
+
+✅ Very clean, modern Java style
+
+✅ Works for all cases (missing 1 or many)
+
+2. Boolean Array (Presence Tracker)
+
+Time: O(n)
+
+Space: O(n) (compact boolean[])
+
+✅ More space-efficient than HashSet
+
+✅ Faster in practice
+
+Best for multiple missing values
+
+3. List + Stream
+
+Time: O(n²) (because contains() is O(n))
+
+Space: O(n)
+
+❌ Inefficient, but acceptable for small arrays
+
+🔹 🚀 Final Recommendations (Sr. SDET-style)
+
+If ONE missing number:
+👉 Use XOR (O(n), O(1), no overflow risk)
+
+If MULTIPLE missing numbers:
+👉 Use Boolean Array (O(n), O(n), very fast, cache-friendly)
+👉 Or Set + Streams (O(n), O(n), clean & expressive Java)
+
+If array size is small & clarity matters more than performance:
+👉 Streams + List is fine (for interviews/demo)

@@ -1,0 +1,84 @@
+🔹 Approaches to Solve Word Frequency
+1. Streams + Collectors.groupingBy (Your Approach) ✅
+
+Best balance of readability + power.
+
+import java.util.*;
+import java.util.stream.*;
+
+public class WordFrequencyStream {
+    public static void main(String[] args) {
+        List<String> words = Arrays.asList("apple", "Banana", "Orange", "banana", "apple");
+
+        Map<String, Long> wordFrequency = words.stream()
+                .collect(Collectors.groupingBy(
+                        word -> word.toLowerCase(),  // normalize case
+                        Collectors.counting()));     // count occurrences
+
+        System.out.println("Word Frequency: " + wordFrequency);
+    }
+}
+
+
+✅ Time: O(n)
+✅ Space: O(n)
+✅ Concise, expressive, modern Java
+💡 Best for interviews
+
+2. Using Map.merge() (Imperative, More Control)
+
+Sometimes interviewer asks without Streams (to test Map APIs).
+
+import java.util.*;
+
+public class WordFrequencyMerge {
+    public static void main(String[] args) {
+        List<String> words = Arrays.asList("apple", "Banana", "Orange", "banana", "apple");
+
+        Map<String, Integer> wordFrequency = new HashMap<>();
+        for (String word : words) {
+            wordFrequency.merge(word.toLowerCase(), 1, Integer::sum);
+        }
+
+        System.out.println("Word Frequency: " + wordFrequency);
+    }
+}
+
+
+✅ Time: O(n)
+✅ Space: O(n)
+✅ Very efficient, avoids Stream overhead
+💡 Good for performance-sensitive use cases
+
+3. Parallel Streams (for Large Input)
+
+For huge datasets, parallelize counting.
+
+import java.util.*;
+import java.util.stream.*;
+
+public class WordFrequencyParallel {
+    public static void main(String[] args) {
+        List<String> words = Arrays.asList("apple", "Banana", "Orange", "banana", "apple");
+
+        Map<String, Long> wordFrequency = words.parallelStream()
+                .collect(Collectors.groupingByConcurrent(
+                        word -> word.toLowerCase(),
+                        Collectors.counting()));
+
+        System.out.println("Word Frequency: " + wordFrequency);
+    }
+}
+
+
+✅ Uses groupingByConcurrent → thread-safe
+✅ Parallelism helps on large data
+⚠️ Overhead not worth it for small lists
+
+🔹 🚀 Sr. SDET Takeaways
+
+Small/medium input (interview demos): 👉 Streams + groupingBy (your solution)
+
+Performance-critical system: 👉 Map.merge() (lower overhead)
+
+Large datasets / concurrency: 👉 Parallel Stream + groupingByConcurrent
