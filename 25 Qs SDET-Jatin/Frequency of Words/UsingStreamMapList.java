@@ -8,8 +8,7 @@ public class UsingStreamMapList {
         List<String> words = Arrays.asList("apple", "Banana", "Orange", "banana", "apple");
 
         Map<String, Long> wordFrequency = words.stream()
-                .collect(Collectors.groupingBy(
-                        word -> word.toLowerCase(), Collectors.counting()));
+                .collect(Collectors.groupingBy(word -> word.toLowerCase(), Collectors.counting()));
 
         System.out.println("Word Frequency: " + wordFrequency);
 
