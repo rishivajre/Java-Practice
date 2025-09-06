@@ -9,7 +9,7 @@ public class CountUsingTwoPointer {
             if (vowels.indexOf(c) != -1) {
                 count++;
             }
-        }
+        } 
         System.out.println(count);
     }
 }
