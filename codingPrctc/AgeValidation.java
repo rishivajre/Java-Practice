@@ -1,24 +1,21 @@
 import java.util.Scanner;
 
 public class AgeValidation {
-    public static boolean isElligible(int age){
-        if (age>18){
-            return true;
-        }
-        else{
-            return false;
-        }
+    // Corrected the method name and simplified the logic.
+    // Voting eligibility is typically 18 or older.
+    public static boolean isEligible(int age){
+        return age >= 18;
     }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your age: ");
         int age = scanner.nextInt();
-        if (isElligible(age)){
-            System.out.println("You are Elligible to vote");
+        if (isEligible(age)){
+            System.out.println("You are eligible to vote");
         }
         else{
-            System.out.println("You are not Elligible to vote");
+            System.out.println("You are not eligible to vote");
         }
         scanner.close();
     }
