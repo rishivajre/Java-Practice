@@ -27,6 +27,5 @@ public class ReverseNumberUsingMath {
         number = -67890; // Example negative number to reverse
         int reversedNumber = reverseNumMath(number);
         System.out.println(reversedNumber);
-
     }
 }
